@@ -1,0 +1,213 @@
+.gallery-container {
+    /*position: absolute;*/
+    /*top: 100%;*/
+    background-image: url(resources/backgroundimg.JPG);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+    /*background-color: blue;*/
+}
+
+.gallery-outer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*position: absolute;*/
+    /*width: 100%;*/
+    height: 80%;
+    /*top: 10%;*/
+    /*left: 4%;*/
+    overflow-y: auto;
+    /*border: 0;*/
+    /*-moz-box-shadow: 0 0 3px #888888;*/
+    /*-webkit-box-shadow: 0 0 3px #888888;*/
+    /*box-shadow: 0 0 3px #888888;*/
+}
+
+.gallery-header {
+    margin-top: 40px;
+    color: white;
+    /*padding: 2% 0 10px 4.7%;*/
+    /*margin-bottom: 0;*/
+    /*font-weight: bold;*/
+    /*font-size: 20px;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+.gallery-inner-container {
+    margin: auto;
+    display: inline-flex;
+    /*margin: 10px 5px 5px 10px;*/
+    /*flex-grow: 1;*/
+    /*flex-wrap: wrap;*/
+    height: fit-content;
+    width: fit-content;
+    /*background-color:white;*/
+    background-clip: content-box;
+    /*border: 1px solid white;*/
+    /*background: white;*/
+}
+
+.img-thumbnail {
+    max-height: 300px;
+    max-width: 300px;
+    opacity: 1;
+    transition: opacity .3s linear;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+}
+
+.img-thumbnail:focus, .img-thumbnail:active {
+    outline: none;
+}
+
+
+
+.modal-window {
+    /*display: none; !* Hidden by default *!*/
+    /*position: fixed; !* Stay in place *!*/
+    /*z-index: 1; !* Sit on top *!*/
+    /*padding-top: 100px; !* Location of the box *!*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*width: 100%; !* Full width *!*/
+    /*height: 100%; !* Full height *!*/
+    /*overflow: auto; !* Enable scroll if needed *!*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    /*background-color: rgba(0,0,0,0.9); !* Black w/ opacity *!*/
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-height: 80%;
+    max-width: 800px;
+    overflow:hidden;
+
+    /*-webkit-animation-name: zoom;*/
+    /*-webkit-animation-duration: 0.2s;*/
+    /*-moz-animation-name: zoom;*/
+    /*-moz-animation-duration: 0.2s;*/
+    /*-o-animation-name: zoom;*/
+    /*-o-animation-duration: 0.2s;*/
+    /*animation-name: zoom;*/
+    /*animation-duration: 0.2s;*/
+
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+@-moz-keyframes zoom {
+    from {-moz-transform:scale(0)}
+    to {-moz-transform:scale(1)}
+}
+
+@-o-keyframes zoom {
+    from {-o-transform:scale(0)}
+    to {-o-transform:scale(1)}
+}
+
+
+.close-modal {
+    /*position: absolute;*/
+    /*top: 15px;*/
+    /*right: 35px;*/
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    /*make the element unhighlightable
+    source: evanhahn.com/how-to-disable-copy-paste-on-your-website/*/
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none
+}
+
+.next-image {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+}
+
+.previous-image {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+}
+
+.next-image:focus, .next-image:active {
+    outline: none;
+}
+
+.previous-image:focus, .previous-image:active {
+    outline: none;
+}
+
+.next-image:hover {
+    -webkit-transform: rotate(-45deg) scale(1.5);
+    -moz-transform: rotate(-45deg) scale(1.5);
+    -o-transform: rotate(-45deg) scale(1.5);
+    transform: rotate(-45deg) scale(1.5);
+    cursor: pointer;
+    color: #bbb;
+
+}
+
+.previous-image:hover {
+    -webkit-transform: rotate(135deg) scale(1.5);
+    -moz-transform: rotate(135deg) scale(1.5);
+    -o-transform: rotate(135deg) scale(1.5);
+    transform: rotate(135deg) scale(1.5);
+    cursor: pointer;
+    color: #bbb;
+}

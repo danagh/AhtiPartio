@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /*disable scrolling */
+    overflow-y: hidden;
+}
+ body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+     /*position: fixed;*/
+    overflow-y: hidden;
+     /*height: 100%;*/
+
+
+
+    /*background:*/
+        /*linear-gradient(*/
+        /*rgba(0, 0, 0, 0.5),*/
+        /*rgba(0, 0, 0, 0.5)*/
+        /*),*/
+            /*url(resources/backgroundimg.JPG);*/
+    /*background-size: cover;*/
+
+
+}
+
+.whole-container {
+    /*position: absolute;*/
+    /*top: -50%;*/
+    /*left: -50%;*/
+    /*width: 200%;*/
+    /*height: 200%;*/
+    background-image: url(resources/backgroundimg.JPG);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    /*overflow-y: hidden;*/
+    /*position: fixed;*/
+}
+
+.language-container {
+    /*position: absolute;*/
+    /*top: 26%;*/
+    /*left: calc(75% - 7em);*/
+}
+
+.lan-eng-container, .lan-fin-container, .lan-swe-container {
+    font-family: 'Poppins', sans-serif;
+    padding-right: 10px;
+    color: white;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    /*cursor: pointer;*/
+}
+
+.lan-eng-container:hover, .lan-fin-container:hover, .lan-swe-container:hover {
+    cursor: pointer;
+    /*-webkit-transform: scale(1.5);*/
+    /*-moz-transform: scale(1.5);*/
+    /*-o-transform: scale(1.5);*/
+    /*transform: scale(1.5);*/
+}
+
+.activelan {
+    text-decoration: underline;
+}
+
+.ahti {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    /*position: absolute;*/
+    /*top: 43%;*/
+    /*left: 45.5%;*/
+    font-size: 60px;
+    font-weight: bold;
+
+    /*float: left;*/
+    /*position: relative;*/
+    /*left: 45.5%;*/
+    /*top: 43%;*/
+}
+
+.partio {
+    /*position: relative;*/
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    /*top: 46.4%;*/
+    /*left: 44.5%;*/
+    font-size: 60px;
+    font-weight: bold;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .ahti-img {
+        height: auto;
+        max-width: 95%;
+        margin-top: 25%;
+        margin-left: -20%;
+
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+    }
+
+    .partio-img {
+        height: auto;
+        max-width: 100%;
+        margin-top: -20%;
+        margin-left: 15%;
+
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+    }
+}
+
+@media only screen and (min-device-width: 601px) {
+    .ahti-img {
+        margin-left: -16%;
+        margin-top: -5%;
+        height: auto;
+        max-width: 80%;
+
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+    }
+
+    .partio-img {
+        margin-left: 18%;
+        margin-top: -10%;
+        height: auto;
+        max-width: 88%;
+
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+    }
+}
+
+
+.ahti:hover, .partio:hover {
+    cursor:default;
+}
+
+i {
+    border: solid white;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 8px;
+    /*position: absolute;*/
+    margin-bottom: -6px;
+
+    -webkit-transition:  -webkit-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    -o-transition: -o-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out;
+    transition: transform .2s ease-out;
+
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+
+.about-pointer {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+
+    -webkit-animation: pulsate1 6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate1 6s ease-out;
+    -moz-animation-iteration-count: infinite;
+    animation: pulsate1 6s ease-out;
+    animation-iteration-count: infinite;
+    -o-animation: pulsate1 6s ease-out;
+}
+
+@-webkit-keyframes pulsate1 {
+    0% {-webkit-transform: scale(1, 1) rotate(135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(135deg);}
+}
+
+@keyframes pulsate1 {
+    0% {-webkit-transform: scale(1, 1) rotate(135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(135deg);}
+}
+
+@-moz-keyframes pulsate1 {
+    0% {-webkit-transform: scale(1, 1) rotate(135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(135deg);}
+}
+
+@-o-keyframes pulsate1 {
+    0% {-webkit-transform: scale(1, 1) rotate(135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(135deg);}
+}
+
+/*source: https://stackoverflow.com/questions/9233979/css-is-it-possible-to-enlarge-with-animation-an-element-in-place-with-css*/
+.about-pointer:hover {
+    -webkit-transform: rotate(135deg) scale(1.5);
+    -moz-transform: rotate(135deg) scale(1.5);
+    -o-transform: rotate(135deg) scale(1.5);
+    transform: rotate(135deg) scale(1.5);
+}
+
+.contact-pointer {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+
+    -webkit-animation: pulsate2 6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate2 6s ease-out;
+    -moz-animation-iteration-count: infinite;
+    animation: pulsate2 6s ease-out;
+    animation-iteration-count: infinite;
+    -o-animation: pulsate2 6s ease-out;
+    /*top: 48%;*/
+    /*left: calc(75% - 3em);*/
+}
+
+@-webkit-keyframes pulsate2 {
+    0% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+}
+
+@keyframes pulsate2 {
+    0% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+}
+
+@-moz-keyframes pulsate2 {
+    0% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+}
+
+@-o-keyframes pulsate2 {
+    0% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-45deg);}
+}
+
+.contact-pointer:hover {
+    -webkit-transform: rotate(-45deg) scale(1.5);
+    -moz-transform: rotate(-45deg) scale(1.5);
+    -o-transform: rotate(-45deg) scale(1.5);
+    transform: rotate(-45deg) scale(1.5);
+}
+
+.gallery-pointer {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    margin-left: 13px;
+
+    -webkit-animation: pulsate3 6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate3 6s ease-out;
+    -moz-animation-iteration-count: infinite;
+    animation: pulsate3 6s ease-out;
+    animation-iteration-count: infinite;
+    -o-animation: pulsate3 6s ease-out;
+}
+
+@-webkit-keyframes pulsate3 {
+    0% {-webkit-transform: scale(1, 1) rotate(45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(45deg);}
+}
+
+@keyframes pulsate3 {
+    0% {-webkit-transform: scale(1, 1) rotate(45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(45deg);}
+}
+
+@-moz-keyframes pulsate3 {
+    0% {-webkit-transform: scale(1, 1) rotate(45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(45deg);}
+}
+
+@-o-keyframes pulsate3 {
+    0% {-webkit-transform: scale(1, 1) rotate(45deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(45deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(45deg);}
+}
+
+.gallery-pointer:hover {
+    -webkit-transform: rotate(45deg) scale(1.5);
+    -moz-transform: rotate(45deg) scale(1.5);
+    -o-transform: rotate(45deg) scale(1.5);
+    transform: rotate(45deg) scale(1.5);
+}
+
+.menu-pointer {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    margin-left: 6px;
+
+    -webkit-animation: pulsate4 6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate4 6s ease-out;
+    -moz-animation-iteration-count: infinite;
+    animation: pulsate4 6s ease-out;
+    animation-iteration-count: infinite;
+    -o-animation: pulsate4 6s ease-out;
+}
+
+@-webkit-keyframes pulsate4 {
+    0% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+}
+
+@keyframes pulsate4 {
+    0% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+}
+
+@-moz-keyframes pulsate4 {
+    0% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+}
+
+@-o-keyframes pulsate4 {
+    0% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+    50% {-webkit-transform: scale(1.5, 1.5) rotate(-135deg);}
+    100% {-webkit-transform: scale(1, 1) rotate(-135deg);}
+}
+
+.menu-pointer:hover {
+    -webkit-transform: rotate(-135deg) scale(1.5);
+    -moz-transform: rotate(-135deg)  scale(1.5);
+    -o-transform: rotate(-135deg) scale(1.5);
+    transform: rotate(-135deg) scale(1.5);
+}
+
+.about-text, .contact-text {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    color: white;
+}
+
+/*.contact-text {*/
+    /*font-family: 'Poppins', sans-serif;*/
+    /*display: inline-block;*/
+    /*color: white;*/
+/*}*/
+
+.gallery-text, .menu-text {
+
+    margin: 0;
+    color: white;
+}
+
+.about-text:hover, .contact-text:hover, .gallery-text:hover, .menu-text:hover {
+    cursor: pointer;
+}
+
+.about-text, .contact-text, .gallery-text, .menu-text {
+    -webkit-animation: pulsate5 6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate5 6s ease-out;
+    -moz-animation-iteration-count: infinite;
+    animation: pulsate5 6s ease-out;
+    animation-iteration-count: infinite;
+    -o-animation: pulsate5 6s ease-out;
+}
+
+
+@-webkit-keyframes pulsate5 {
+    0% {-webkit-transform: scale(1, 1);}
+    50% {-webkit-transform: scale(1.25, 1.25);}
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+@keyframes pulsate5 {
+    0% {-webkit-transform: scale(1, 1);}
+    50% {-webkit-transform: scale(1.25, 1.25);}
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+@-moz-keyframes pulsate5 {
+    0% {-webkit-transform: scale(1, 1);}
+    50% {-webkit-transform: scale(1.25, 1.25);}
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+@-o-keyframes pulsate5 {
+    0% {-webkit-transform: scale(1, 1);}
+    50% {-webkit-transform: scale(1.25, 1.25);}
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+/*.menu-text {*/
+    /*position: absolute;*/
+    /*left: 49.3%;*/
+    /*top: 3%;*/
+    /*color: white;*/
+/*}*/
+
+p {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+p:hover {
+    cursor: default;
+}

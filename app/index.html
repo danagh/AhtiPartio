@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="about/about.css">
+  <link rel="stylesheet" href="contact/contact.css">
+  <link rel="stylesheet" href="gallery.css">
+  <script src="modernizr-2.8.3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="w3.css">
+</head>
+<body ng-app="ngAnimate" ng-controller="mainController">
+  <div class="scroll-anchor"></div>
+  <div class="w3-display-container whole-container" ng-click="closeEverything()">
+
+    <!--language containers-->
+    <div class="w3-display-topright w3-padding">
+      <div class="lan-fin-container" ng-click="changeLanguage('fi')" ng-class="{activelan: fi}">
+        Suomeksi
+      </div>
+      <div class="lan-swe-container" ng-click="changeLanguage('se')" ng-class="{activelan: se}" >
+        Svenska
+      </div>
+      <div class="lan-eng-container" ng-click="changeLanguage('en')" ng-class="{activelan: en}" >
+        English
+      </div>
+    </div>
+
+    <!--ahti partio containers-->
+    <div class="w3-display-middle w3-padding">
+      <div class="ahti">
+        <img src="resources/AP-0-0.png" class="ahti-img"/>
+      </div>
+      <div class="partio">
+        <img src="resources/AP-1-0.png" class=" partio-img" />
+      </div>
+    </div>
+
+
+    <!--about clicker-->
+    <div class="w3-display-left w3-padding about-menu">
+      <i class="about-pointer" ng-click="showAboutPage()"></i>
+      <p class="about-text" translate="ABOUT_TEXT" ng-click="showAboutPage()">About></p>
+    </div>
+
+    <!--contact clicker-->
+    <div class="w3-display-right w3-padding contact-menu">
+      <p class="contact-text" translate="CONTACT_TEXT" ng-click="showContactPage()">Contact></p>
+      <i class="contact-pointer" ng-click="showContactPage()"></i>
+    </div>
+
+    <!--gallery clicker-->
+    <div class="w3-display-bottommiddle w3-padding-16">
+      <p class="gallery-text" translate="GALLERY_TEXT" ng-click="showGalleryPage()">Gallery</p>
+      <i class="gallery-pointer" ng-click="showGalleryPage()" ></i>
+    </div>
+
+    <!--about page content-->
+    <div class="w3-half w3-display-left w3-round about-container" ng-click ng-show="showAbout">
+      <span class="w3-display-topleft w3-padding small-screen-close" >&times;</span>
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center header-text" translate="ABOUT_HEADER"> </h1>
+        <p translate="ABOUT_CONTENT"></p>
+      </div>
+
+      <div class="w3-col m6 w3-padding">
+        <img class="w3-round w3-padding about-image" src="resources/niceimg.JPG">
+        <div class="w3-hide-small">
+          <img class="w3-round w3-padding about-image" src="resources/fishingimg.JPG">
+        </div>
+      </div>
+    </div>
+
+    <!--contact page content-->
+    <!--source: http://www.chaosm.net/blog/2014/05/21/angularjs-contact-form-with-bootstrap-and-phpmailer/-->
+    <div class="w3-half w3-display-right w3-round contact-container" ng-controller="contactController" ng-show="showContact">
+      <span class="w3-display-topleft w3-padding small-screen-close" >&times;</span>
+      <div class="w3-row w3-padding-large">
+        <h1 class="w3-center header-text" translate="CONTACT_HEADER"></h1>
+      </div>
+      <form ng-submit="submit(contactform)" name="contactform" method="post" class="w3-padding-large" role="form">
+        <div class="form-group w3-padding" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+          <label for="inputName" class="form-label" translate="NAME"></label>
+          <div class="">
+            <input ng-model="formData.inputName" type="text" class="form-control w3-input w3-round" id="inputName" name="inputName" required>
+          </div>
+        </div>
+        <div class="form-group w3-padding" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+          <label for="inputEmail" class="form-label" translate="EMAIL"></label>
+          <div class="">
+            <input ng-model="formData.inputEmail" type="email" class="form-control w3-input w3-round" id="inputEmail" name="inputEmail"  required>
+          </div>
+        </div>
+        <div class="form-group w3-padding" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+          <label for="inputSubject" class="form-label" translate="SUBJECT"></label>
+          <div class="">
+            <input ng-model="formData.inputSubject" type="text" class="form-control w3-input w3-round" id="inputSubject" name="inputSubject"  required>
+          </div>
+        </div>
+        <div class="form-group w3-padding" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+          <label for="inputMessage" class="form-label" translate="MESSAGE"></label>
+          <div class="">
+            <textarea ng-model="formData.inputMessage" class="form-control w3-input w3-round " rows="4" id="inputMessage" name="inputMessage"  required></textarea>
+          </div>
+        </div>
+        <div class="form-group w3-padding-48">
+          <div class="w3-padding">
+            <button type="submit" class="form-control w3-button w3-block w3-round w3-border" ng-disabled="submitButtonDisabled" translate="SEND"></button>
+          </div>
+        </div>
+      </form>
+      <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+
+    </div>
+
+  </div>
+
+  <!--gallery content-->
+  <div class="w3-display-container gallery-container">
+    <div class="w3-display-topmiddle w3-padding-16">
+      <i class="menu-pointer" ng-click="showMenuAgain()"></i>
+      <p class="menu-text" translate="MENU_TEXT" ng-click="showMenuAgain()"></p>
+    </div>
+
+    <div class="w3-container w3-padding  ">
+      <h1 class="w3-left-align gallery-header" translate="GALLERY_TEXT"></h1>
+    </div>
+
+    <div class="gallery-outer-container">
+      <div class="gallery-inner-container w3-padding w3-round" ng-repeat="image in images">
+          <img ng-src="{{image.url}}" class="img-thumbnail w3-image w3-hover-opacity w3-round" ng-click="enhanceImage(image)"/>
+      </div>
+    </div>
+  </div>
+
+  <!--modal content-->
+  <div class="w3-modal modal-window w3-black">
+    <span class="w3-display-topright w3-padding close-modal" ng-click="closeModal()">&times;</span>
+    <div class="w3-display-right w3-padding">
+      <i class="next-image" ng-click="nextImage()" ></i>
+    </div>
+    <div class="w3-display-left w3-padding">
+      <i class="previous-image" ng-click="previousImage()" ></i>
+    </div>
+    <img src="" data-ng-swipe-left="nextImage()" data-ng-swipe-right="previousImage()" class="w3-display-middle w3-padding-small modal-content" />
+  </div>
+
+  <!--footer content-->
+  <!--<footer class="w3-container w3-padding w3-center">-->
+    <!--<p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+  <!--</footer>-->
+
+  <script src="angular.js"></script>
+  <script src="angular-route.js"></script>
+  <script src="angular-animate.js"></script>
+  <script src="angular-translate.js"></script>
+  <script src="angular-scroll.js"></script>
+  <script src="angular-touch.js"></script>
+  <script src="app.js"></script>
+  <script src="contact/contact.js"></script>
+  <script src="translations.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

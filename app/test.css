@@ -1,0 +1,148 @@
+
+.test-class {
+    background-image: url(resources/backgroundimg.JPG);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+
+}
+
+.ahti {
+    text-align: center;
+    color: white;
+    /*position: absolute;*/
+    /*top: 43%;*/
+    /*left: 45.5%;*/
+    font-size: 60px;
+    font-weight: bold;
+
+    /*float: left;*/
+    /*position: relative;*/
+    /*left: 45.5%;*/
+    /*top: 43%;*/
+}
+
+.partio {
+    text-align: right;
+    color: white;
+    /*top: 46.4%;*/
+    /*left: 44.5%;*/
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.ahti:hover, .partio:hover {
+    cursor:default;
+}
+
+i {
+    border: solid white;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: -6px;
+
+    -webkit-transition:  -webkit-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    -o-transition: -o-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out;
+    transition: transform .2s ease-out;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.about-div {
+    height: 100%;
+    width: 20%;
+    display: block;
+    float: left;
+}
+
+.about-pointer {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+
+/*source: https://stackoverflow.com/questions/9233979/css-is-it-possible-to-enlarge-with-animation-an-element-in-place-with-css*/
+.about-pointer:hover, .about-pointer:focus {
+    -webkit-transform: rotate(135deg) scale(1.5);
+    -moz-transform: rotate(135deg) scale(1.5);
+    -o-transform: rotate(135deg) scale(1.5);
+    transform: rotate(135deg) scale(1.5);
+}
+
+.contact-pointer {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+
+}
+
+.contact-pointer:hover, .contact-pointer:focus {
+    -webkit-transform: rotate(-45deg) scale(1.5);
+    -moz-transform: rotate(-45deg) scale(1.5);
+    -o-transform: rotate(-45deg) scale(1.5);
+    transform: rotate(-45deg) scale(1.5);
+}
+
+.gallery-pointer {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    margin-left: 13px;
+
+}
+
+.gallery-pointer:hover, .gallery-pointer:focus {
+    -webkit-transform: rotate(45deg) scale(1.5);
+    -moz-transform: rotate(45deg) scale(1.5);
+    -o-transform: rotate(45deg) scale(1.5);
+    transform: rotate(45deg) scale(1.5);
+}
+
+.menu-pointer {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+
+}
+
+.menu-pointer:hover, .menu-pointer:focus {
+    -webkit-transform: rotate(-135deg) scale(1.5);
+    -moz-transform: rotate(-135deg)  scale(1.5);
+    -o-transform: rotate(-135deg) scale(1.5);
+    transform: rotate(-135deg) scale(1.5);
+}
+
+.about-text {
+    position: absolute;
+    top: 47.1%;
+    left: calc(28% - 2em);
+    color: white;
+}
+
+.contact-text {
+    position: absolute;
+    top: 47.1%;
+    left: calc(75% - 7.5em);
+    color: white;
+}
+
+.gallery-text {
+    margin:0;
+    color: white;
+}
+
+.menu-text {
+    position: absolute;
+    left: 49.3%;
+    top: 3%;
+    color: white;
+}
